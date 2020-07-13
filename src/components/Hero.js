@@ -23,7 +23,7 @@ const H2 = styled.h2`
   }
 `
 const Tagline = styled.div`
-  font-family: "LEMONMILK";
+  font-family: "LEMONMILK", impact, Sans-Serif;
   font-weight: 700;
   width: 425px;
   max-width: 100%;

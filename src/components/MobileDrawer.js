@@ -6,7 +6,7 @@ import { language, navigation_text } from "./language"
 const StyledMenu = styled.nav`
   display: none;
   flex-direction: column;
-  font-family: "LEMONMILK";
+  font-family: "LEMONMILK", impact, Sans-Serif;
   justify-content: center;
   background: #243c84;
   height: 100vh;

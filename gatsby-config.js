@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Tony Adame For Council`,
+    description: `Tony Adame's campaign for Santa Ana City Council`,
+    author: `@kenput3r`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -13,13 +13,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `fonts`,
-    //     path: `${__dirname}/src/fonts`,
-    //   },
-    // },
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {

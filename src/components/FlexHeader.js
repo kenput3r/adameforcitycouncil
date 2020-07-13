@@ -15,7 +15,7 @@ const DesktopHeader = styled.div`
   flex-direction: row;
   align-item: center;
   justify-content: space-between;
-  font-family: "LEMONMILK";
+  font-family: "LEMONMILK", impact, Sans-Serif;
   margin: 0 auto;
   padding: 1rem 1.0875rem;
   position: relative;
@@ -77,7 +77,7 @@ const DesktopLink = styled.div`
 `
 const Donate = styled.a`
   display: inline-block;
-  font-family: "LEMONMILK";
+  font-family: "LEMONMILK", impact, Sans-Serif;
   font-weight: 700;
   font-style: italic;
   padding: 12px;

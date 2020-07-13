@@ -4,7 +4,7 @@ import { language, quote } from "./language"
 
 const Section = styled.section`
   color: #243c84;
-  font-family: "LEMONMILK";
+  font-family: "LEMONMILK", impact, Sans-Serif;
   font-weight: 700;
   font-size: 1.62671rem;
   line-height: 1.2;

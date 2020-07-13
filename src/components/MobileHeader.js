@@ -6,7 +6,7 @@ import MobileLogo from "./mobile_logo"
 const Container = styled.nav`
   border-bottom: 2px solid #243c84;
   display: table;
-  font-family: "LEMONMILK";
+  font-family: "LEMONMILK", impact, Sans-Serif;
   position: relative;
   width: 100%;
   z-index: 10;

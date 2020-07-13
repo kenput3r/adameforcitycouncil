@@ -68,7 +68,7 @@ const ImageContainer = styled.div`
 `
 const BulletContainer = styled.div`
   color: #243c84;
-  font-family: "LEMONMILK";
+  font-family: "LEMONMILK", impact, Sans-Serif;
   font-size: 1.62671rem;
   font-weight: 700;
   width: 40%;
