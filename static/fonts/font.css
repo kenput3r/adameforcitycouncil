@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "LEMONMILK";
+  font-weight: 200;
+  font-style: normal;
+  src: url("LEMONMILK-Light.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "LEMONMILK";
+  font-weight: 200;
+  font-style: italic;
+  src: url("LEMONMILK-LightItalic.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "LEMONMILK";
+  font-weight: 400;
+  font-style: normal;
+  src: url("LEMONMILK-Regular.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "LEMONMILK";
+  font-weight: 400;
+  font-style: italic;
+  src: url("LEMONMILK-RegularItalic.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "LEMONMILK";
+  font-weight: 700;
+  font-style: normal;
+  src: url("LEMONMILK-Bold.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "LEMONMILK";
+  font-weight: 700;
+  font-style: italic;
+  src: url("LEMONMILK-BoldItalic.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: Modak;
+  font-weight: 400;
+  font-style: normal;
+  src: url("Modak-Regular.ttf") format("ttf");
+  font-display: swap;
+}

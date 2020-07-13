@@ -1,5 +1,49 @@
+@font-face {
+  font-family: "LEMONMILK";
+  font-weight: 200;
+  font-style: normal;
+  src: url("/fonts/LEMONMILK-Light.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "LEMONMILK";
+  font-weight: 200;
+  font-style: italic;
+  src: url("/fonts/LEMONMILK-LightItalic.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "LEMONMILK";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/fonts/LEMONMILK-Regular.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "LEMONMILK";
+  font-weight: 400;
+  font-style: italic;
+  src: url("/fonts/LEMONMILK-RegularItalic.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "LEMONMILK";
+  font-weight: 700;
+  font-style: normal;
+  src: url("/fonts/LEMONMILK-Bold.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "LEMONMILK";
+  font-weight: 700;
+  font-style: italic;
+  src: url("/fonts/LEMONMILK-BoldItalic.otf") format("opentype");
+  font-display: swap;
+}
+
 html {
-  font-family: sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -41,6 +85,7 @@ template {
 }
 a {
   background-color: transparent;
+  color: #243c84;
   -webkit-text-decoration-skip: objects;
 }
 a:active,
@@ -200,7 +245,8 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -230,8 +276,7 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "LEMONMILK";
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
@@ -247,8 +292,7 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "LEMONMILK";
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
@@ -264,8 +308,7 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "LEMONMILK";
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
@@ -281,8 +324,7 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "LEMONMILK";
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
@@ -298,8 +340,7 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "LEMONMILK";
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.85028rem;
@@ -315,8 +356,7 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "LEMONMILK";
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.78405rem;
@@ -615,8 +655,28 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+/********************************************
+*************CLASSES & IDS******************/
+.blue-text {
+  color: #243c84;
+}
+.blue-background {
+  background-color: #243c84;
+}
+.yellow-text {
+  color: #f1ca12;
+}
+.yellow-background {
+  color: #f1ca12;
+}
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
   }
+}
+::selection {
+  background-color: #f1ca12;
+}
+::-moz-selection {
+  background-color: #f1ca12;
 }
