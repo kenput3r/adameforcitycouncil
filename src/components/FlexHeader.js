@@ -152,9 +152,9 @@ const Header = () => {
           <DesktopLink><Link to="/">{navigation_text.tonys_story[language]}</Link></DesktopLink>
           <DesktopLink><Link to="/">{navigation_text.about_ward_1[language]}</Link></DesktopLink>
           <DesktopLink><Link to="/">{navigation_text.tonys_vision[language]}</Link></DesktopLink>
-          <DesktopLink><Link to="/">{navigation_text.issues[language]}</Link></DesktopLink>
+          {/* <DesktopLink><Link to="/">{navigation_text.issues[language]}</Link></DesktopLink> */}
           <DesktopLink><Link to="/">{navigation_text.get_involved[language]}</Link></DesktopLink>
-          <DesktopLink><Link to="/">{navigation_text.language_toggle[language]}</Link></DesktopLink>
+          {/* <DesktopLink><Link to="/">{navigation_text.language_toggle[language]}</Link></DesktopLink> */}
           <DesktopLink>
             <a href="https://facebook.com/"><img src={facebook} alt="facebook icon" /></a>
           </DesktopLink>
@@ -164,7 +164,7 @@ const Header = () => {
           <DesktopLink>
             <a href="https://twitter.com/"><img src={twitter} alt="twitter icon" /></a>
           </DesktopLink>
-          <Donate className="button" href="/">{navigation_text.donate[language]}</Donate>
+          {/* <Donate className="button" href="/">{navigation_text.donate[language]}</Donate> */}
         </Nav>
       </DesktopHeader>
       <MobileHeader drawerOpen={drawerOpen} setDrawerOpen={setDrawerOpen} />

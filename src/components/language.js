@@ -71,12 +71,12 @@ export const issues = {
   },
   bullets: {
     english: [
-      `Lorem ipsum dolor sit amet, consec`,
-      `Lorem ipsum dolor sit amet, consec`,
-      `Lorem ipsum dolor sit amet, consec`,
-      `Lorem ipsum dolor sit amet, consec`,
-      `Lorem ipsum dolor sit amet, consec`,
-      `Lorem ipsum dolor sit amet, consec`
+      `Youth Investment`,
+      `Public Safety as Holistic Approach`,
+      `Address the Homelessness Crisis with Care`,
+      `Housing as a Human Right`,
+      `Bring Honor to Immigration`,
+      `Promote and Attract Small Businesses`
     ],
     spanish: [
       ``,
