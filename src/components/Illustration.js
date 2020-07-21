@@ -34,7 +34,7 @@ const ImageContainer = styled.div`
 const Illustration = () => {
   const illustration_image = useStaticQuery(graphql`
     query {
-      logo: file(relativePath: { eq: "placeholder-illustration.png" }) {
+      logo: file(relativePath: { eq: "Youth-Sports-Photo.png" }) {
         childImageSharp {
           fluid(maxWidth: 680, quality: 100) {
             ...GatsbyImageSharpFluid

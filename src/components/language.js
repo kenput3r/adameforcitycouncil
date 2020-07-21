@@ -44,21 +44,22 @@ export const hero_text = {
     spanish: `Tony Adame`
   },
   tag_line: {
-    english: `ctetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut`,
+    english: `Community-based Leadership that is Proven and Homegrown.`,
     spanish: ``
   }
 }
 
 export const quote = {
   text: {
-    english: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad`,
+    english: `“Some people say my story is the story of the American Dream. I tell them it’s the story of the Santa Ana
+    Dream.”`,
     spanish: ``
   }
 }
 
 export const illustration = {
   text: {
-    english: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat`,
+    english: `“I’m born, raised, live and fully invested in Santa Ana and you can’t buy that. I’m not for sale.”`,
     spanish: ``
   }
 }

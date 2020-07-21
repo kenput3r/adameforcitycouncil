@@ -102,14 +102,14 @@ const BulletContainer = styled.div`
 const Issues = () => {
   const images = useStaticQuery(graphql`
     query {
-      one: file(relativePath: { eq: "placeholder-image.png" }) {
+      one: file(relativePath: { eq: "Tony_Campaign-13.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 680, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      two: file(relativePath: { eq: "placeholder-image.png" }) {
+      two: file(relativePath: { eq: "Tony_Campaign-12.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 680, quality: 100) {
             ...GatsbyImageSharpFluid

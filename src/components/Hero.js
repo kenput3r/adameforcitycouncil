@@ -35,7 +35,7 @@ const Tagline = styled.div`
 const Hero = () => {
   const hero_image = useStaticQuery(graphql`
     query {
-      logo: file(relativePath: { eq: "placeholder-hero.jpg" }) {
+      logo: file(relativePath: { eq: "Tony_Campaign-11.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2048, quality: 100) {
             ...GatsbyImageSharpFluid
