@@ -133,6 +133,37 @@ const CheckboxLabel = styled.label`
     color: #233F94;
   }
 `
+const postContact = async (event, email, fName, lName, phone, sendNewsletter) => {
+  event.preventDefault()
+  const contact_form = document.getElementById('GetInvolved')
+  let form_errors = false
+  for(let i = 0; i < contact_form.elements.length; i++) {
+    const element = contact_form.elements[i]
+    if(element.required && !element.value) {
+      form_errors = true
+    }
+  }
+  if(!form_errors) {
+    if(sendNewsletter) {
+      const body = {email: email, fName: fName, lName: lName, phone: phone}
+      try {
+        const response = await fetch('/.netlify/functions/create-contact', {
+          method: 'POST',
+          body: JSON.stringify(body)
+        })
+        if(!response.error) {
+          console.log('no errors')
+        }else{
+          console.log(response.error)
+        }
+      }catch(error) {
+        console.log(error)
+      }
+    }
+    contact_form.submit()
+  }
+}
+
 const Page = () => {
   const [checkboxChecked, setCheckboxChecked] = useState(0)
   const [checkboxContent, setAfterContent] = useState('')
@@ -150,9 +181,11 @@ const Page = () => {
       setAfterContent('')
     }
   }
-  const handleChange = () => {
-    console.log('the value changed');
+
+  const handleSubmit = (event) => {
+    postContact(event, email, fName, lName, phone, checkboxChecked)
   }
+
   const data = useStaticQuery(graphql`
     query {
       image_1: file(relativePath: { eq: "contact-background.jpg" }) {
@@ -177,7 +210,7 @@ const Page = () => {
           <div>
             <p>{get_involved.body[language]}</p>
           </div>
-          <Form name="GetInvolved" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+          <Form id="GetInvolved" name="GetInvolved" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={event => handleSubmit(event)}>
             <input type="hidden" name="form-name" value="GetInvolved" />
             <Fieldset>
               <LabelWrapper>
