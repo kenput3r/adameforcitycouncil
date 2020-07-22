@@ -337,3 +337,14 @@ export const small_business = {
     spanish: []
   }
 }
+
+export const get_involved = {
+  title: {
+    english: [`Get`, `Involved`],
+    spanish: []
+  },
+  body: {
+    english: `Take back Santa Ana. Elect officials that want to be in office to inspire change, not find another way to line their pockets. It's time for the people to be heard and represented by someone that cares.`,
+    spanish: ``
+  }
+}

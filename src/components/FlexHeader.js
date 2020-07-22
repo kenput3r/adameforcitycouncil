@@ -158,7 +158,7 @@ const Header = ({ page }) => {
           <DesktopLink><Link to="/about-ward-1">{navigation_text.about_ward_1[language]}</Link></DesktopLink>
           <DesktopLink><Link to="/tonys-vision">{navigation_text.tonys_vision[language]}</Link></DesktopLink>
           {/* <DesktopLink><Link to="/">{navigation_text.issues[language]}</Link></DesktopLink> */}
-          <DesktopLink><Link to="/">{navigation_text.get_involved[language]}</Link></DesktopLink>
+          <DesktopLink><Link to="/get-involved">{navigation_text.get_involved[language]}</Link></DesktopLink>
           {/* <DesktopLink><Link to="/">{navigation_text.language_toggle[language]}</Link></DesktopLink> */}
           <DesktopLink>
             <a href="https://www.facebook.com/tony.adame.santa.ana"><img src={facebook} alt="facebook icon" /></a>
