@@ -136,6 +136,11 @@ const CheckboxLabel = styled.label`
 const Page = () => {
   const [checkboxChecked, setCheckboxChecked] = useState(0)
   const [checkboxContent, setAfterContent] = useState('')
+  const [email, setEmail] = useState('')
+  const [fName, setFname] = useState('')
+  const [lName, setLname] = useState('')
+  const [phone, setPhone] = useState('')
+  const [zip, setZip] = useState('')
   const handleClick = () => {
     if(!checkboxChecked) {
       setCheckboxChecked(1)
@@ -173,13 +178,13 @@ const Page = () => {
             <p>{get_involved.body[language]}</p>
           </div>
           <Form name="GetInvolved" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-            <input type="hidden" name="GetInvolved" value="contact" />
+            <input type="hidden" name="form-name" value="contact" />
             <Fieldset name="GetInvolved" method="POST" data-netlify="true">
               <LabelWrapper>
                 <label htmlFor="firstname">First Name</label>
               </LabelWrapper>
               <div>
-                <TextInput size="16" id="firstname" name="firstname" type="text"/>
+                <TextInput size="16" id="firstname" name="firstname" type="text" onChange={(e) => setFname(e.target.value)}/>
               </div>
             </Fieldset>
             <Fieldset>
@@ -187,7 +192,7 @@ const Page = () => {
                 <label htmlFor="lastname">Last Name</label>
               </LabelWrapper>
               <div>
-                <TextInput size="25" id="lastname" name="lastname" type="text"/>
+                <TextInput size="25" id="lastname" name="lastname" type="text" onChange={(e) => setLname(e.target.value)}/>
               </div>
             </Fieldset>
             <Fieldset>
@@ -195,7 +200,7 @@ const Page = () => {
                 <label htmlFor="email">Email</label>
               </LabelWrapper>
               <div>
-                <TextInput size="48" id="email" name="email" type="email" required="required"/>
+                <TextInput size="48" id="email" name="email" type="email" required="required" onChange={(e) => setEmail(e.target.value)}/>
               </div>
             </Fieldset>
             <InlineSet>
@@ -204,7 +209,7 @@ const Page = () => {
                   <label htmlFor="mobile">Mobile Phone</label>
                 </LabelWrapper>
                 <div>
-                  <TextInput size="15" id="mobile" name="mobile" type="tel"/>
+                  <TextInput size="15" id="mobile" name="mobile" type="tel" onChange={(e) => setPhone(e.target.value)}/>
                 </div>
               </div>
               <div className="fieldset zip">
@@ -212,14 +217,14 @@ const Page = () => {
                   <label htmlFor="zip">Zip Code</label>
                 </LabelWrapper>
                 <div>
-                  <TextInput size="8" id="zip" name="zip" type="text"/>
+                  <TextInput size="8" id="zip" name="zip" type="text" onChange={(e) => setZip(e.target.value)}/>
                 </div>
               </div>
             </InlineSet>
             <Fieldset>
               <div>
-                <Checkbox type="checkbox" value={checkboxChecked}></Checkbox>
-                <CheckboxLabel onClick={handleClick} afterContent={checkboxContent}>Sign up for updates</CheckboxLabel>
+                <Checkbox name="newsletter" type="checkbox" value={checkboxChecked}></Checkbox>
+                <CheckboxLabel htmlFor="newsletter" onClick={handleClick} afterContent={checkboxContent}>Sign up for updates</CheckboxLabel>
               </div>
             </Fieldset>
             <TextInput type="submit" value="Let's Go" className="button" />
