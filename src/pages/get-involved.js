@@ -67,6 +67,9 @@ const TextInput = styled.input`
     color: #fff;
     font-family: "LEMONMILK";
     font-weight: bold;
+    :hover {
+      cursor: pointer;
+    }
   }
 `
 const InlineSet = styled.div`
@@ -160,7 +163,7 @@ const postContact = async (event, email, fName, lName, phone, sendNewsletter) =>
         console.log(error)
       }
     }
-    contact_form.submit()
+    //contact_form.submit()
   }
 }
 
