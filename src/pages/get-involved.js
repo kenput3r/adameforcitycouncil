@@ -177,8 +177,8 @@ const Page = () => {
           <div>
             <p>{get_involved.body[language]}</p>
           </div>
-          <Form name="GetInvolved" method="POST" data-netlify="true">
-            <input type="hidden" name="form-name" value="contact" />
+          <Form name="GetInvolved" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="GetInvolved" />
             <Fieldset>
               <LabelWrapper>
                 <label htmlFor="firstname">First Name</label>
