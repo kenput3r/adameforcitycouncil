@@ -144,7 +144,7 @@ const Header = ({ page }) => {
     >
       <DesktopHeader role="navigation">
         <LogoContainer>
-          {page === 'home' ? 
+          {page === 'home' || page === 'tonys vision' ? 
           <h1 style={{ margin: 0, maxWidth: logoWidth }}>
             <a href="/" title={site.title[language]}><img src={logo} alt={`Text reading: Tony "Suavecito" Adame for Santa Ana City Council`} /></a>
           </h1>
@@ -156,7 +156,7 @@ const Header = ({ page }) => {
         <Nav>
           <DesktopLink><Link to="/tonys-story">{navigation_text.tonys_story[language]}</Link></DesktopLink>
           <DesktopLink><Link to="/about-ward-1">{navigation_text.about_ward_1[language]}</Link></DesktopLink>
-          <DesktopLink><Link to="/">{navigation_text.tonys_vision[language]}</Link></DesktopLink>
+          <DesktopLink><Link to="/tonys-vision">{navigation_text.tonys_vision[language]}</Link></DesktopLink>
           {/* <DesktopLink><Link to="/">{navigation_text.issues[language]}</Link></DesktopLink> */}
           <DesktopLink><Link to="/">{navigation_text.get_involved[language]}</Link></DesktopLink>
           {/* <DesktopLink><Link to="/">{navigation_text.language_toggle[language]}</Link></DesktopLink> */}

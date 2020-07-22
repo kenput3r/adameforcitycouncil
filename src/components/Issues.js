@@ -163,22 +163,22 @@ const Issues = () => {
         <BulletContainer className="right">
           <p>
             {issues.bullets[language][0]}
-            <ReadMore href="/">READ MORE</ReadMore>
+            <ReadMore href="/tonys-vision">READ MORE</ReadMore>
           </p>
           <p>
             {issues.bullets[language][1]}
-            <ReadMore href="/">READ MORE</ReadMore>
+            <ReadMore href="/tonys-vision#PublicSafety">READ MORE</ReadMore>
           </p>
           <p>
             {issues.bullets[language][2]}
-            <ReadMore href="/">READ MORE</ReadMore>
+            <ReadMore href="/tonys-vision#Homelessness">READ MORE</ReadMore>
           </p>
         </BulletContainer>
       </Row>
       <Row>
         <BulletContainer className="left">
           <p>
-            <ReadMore href="/">READ MORE</ReadMore>
+            <ReadMore href="/tonys-vision#Housing">READ MORE</ReadMore>
             {issues.bullets[language][3]}
           </p>
           <p>

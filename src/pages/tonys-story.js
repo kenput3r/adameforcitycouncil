@@ -78,11 +78,11 @@ const Page = () => {
         <p>{story.paragraphs[language][3]}</p>
         <p><Img fluid={data.image_3.childImageSharp.fluid} alt="A photograph of Tony in a class room as a child" /></p>
         <p>{story.paragraphs[language][4]}</p>
-        <p><Img fluid={data.image_4.childImageSharp.fluid} alt="A photograph of Tony standing in front of the Suavecito building" /></p>
+        <p><Img fluid={data.image_4.childImageSharp.fluid} alt="Tony standing in front of the Suavecito building" /></p>
         <p>{story.paragraphs[language][5]}</p>
         <p>{story.paragraphs[language][6]}</p>
-        <p><Img fluid={data.image_5.childImageSharp.fluid} alt="A photograph of Tony standing in front of the Suavecito building" /></p>
-        <p><Img fluid={data.image_6.childImageSharp.fluid} alt="A photograph of Tony standing in front of the Suavecito building" /></p>
+        <p><Img fluid={data.image_5.childImageSharp.fluid} alt="Tony handing out Christmas gifts from the Suavecito Metro Van" /></p>
+        <p><Img fluid={data.image_6.childImageSharp.fluid} alt="Tony and other volunteers of the Suavecito Toy Drive" /></p>
 
       </Container>
     </Layout>
