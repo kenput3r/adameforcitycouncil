@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import { language, issues } from "./language"
@@ -102,7 +102,7 @@ const BulletContainer = styled.div`
     margin-right: 5px;
   }
 `
-const ReadMore = styled.a`
+const ReadMore = styled(Link)`
   display: inline-block;
   font-family: "LEMONMILK", impact, Sans-Serif;
   font-weight: 700;
@@ -163,15 +163,15 @@ const Issues = () => {
         <BulletContainer className="right">
           <p>
             {issues.bullets[language][0]}
-            <ReadMore href="/tonys-vision">READ MORE</ReadMore>
+            <ReadMore href="/issues/youth-investment">READ MORE</ReadMore>
           </p>
           <p>
             {issues.bullets[language][1]}
-            <ReadMore href="/tonys-vision#PublicSafety">READ MORE</ReadMore>
+            <ReadMore href="/tonys-vision">READ MORE</ReadMore>
           </p>
           <p>
             {issues.bullets[language][2]}
-            <ReadMore href="/tonys-vision#Homelessness">READ MORE</ReadMore>
+            <ReadMore href="/tonys-vision">READ MORE</ReadMore>
           </p>
         </BulletContainer>
       </Row>
