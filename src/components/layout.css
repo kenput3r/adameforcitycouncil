@@ -637,3 +637,6 @@ pre tt:after {
 ::-moz-selection {
   background-color: #f1ca12;
 }
+body {
+  font-family: Arial Black, Arial, Helvetica, sans-serif;
+}

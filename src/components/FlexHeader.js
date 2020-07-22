@@ -104,7 +104,7 @@ const Donate = styled.a`
   }
 `
 
-const Header = () => {
+const Header = ({ page }) => {
   const [logoWidth, setLogoWidth] = useState(400)
   const [lastScrollY, setLastScrollY] = useState(0)
   const [headerBackground, setHeaderBackground] = useState(0)
@@ -144,13 +144,18 @@ const Header = () => {
     >
       <DesktopHeader role="navigation">
         <LogoContainer>
+          {page === 'home' ? 
           <h1 style={{ margin: 0, maxWidth: logoWidth }}>
             <a href="/" title={site.title[language]}><img src={logo} alt={`Text reading: Tony "Suavecito" Adame for Santa Ana City Council`} /></a>
           </h1>
+          : 
+          <div style={{ margin: 0, maxWidth: logoWidth }}>
+            <a href="/" title={site.title[language]}><img src={logo} alt={`Text reading: Tony "Suavecito" Adame for Santa Ana City Council`} /></a>
+          </div>}
         </LogoContainer>
         <Nav>
-          <DesktopLink><Link to="/">{navigation_text.tonys_story[language]}</Link></DesktopLink>
-          <DesktopLink><Link to="/">{navigation_text.about_ward_1[language]}</Link></DesktopLink>
+          <DesktopLink><Link to="/tonys-story">{navigation_text.tonys_story[language]}</Link></DesktopLink>
+          <DesktopLink><Link to="/about-ward-1">{navigation_text.about_ward_1[language]}</Link></DesktopLink>
           <DesktopLink><Link to="/">{navigation_text.tonys_vision[language]}</Link></DesktopLink>
           {/* <DesktopLink><Link to="/">{navigation_text.issues[language]}</Link></DesktopLink> */}
           <DesktopLink><Link to="/">{navigation_text.get_involved[language]}</Link></DesktopLink>

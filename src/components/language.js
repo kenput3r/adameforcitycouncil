@@ -139,8 +139,12 @@ export const ward_1 = {
 }
 
 export const story = {
-  english: {
-    paragraphs: [
+  title: {
+    english: `Tony's Story`,
+    spanish: ``
+  },
+  paragraphs: {
+    english: [
       `Antonio (Tony) Adame was born on North Susan Street in Santa Ana to Francisco and Rosalba Adame;
       both were recent immigrants from Mexico with nothing to their names. He was raised in a family of 1 of
       6 boys what lived in a small 2-bedroom apartment on Susan until he moved across First Street to South
@@ -178,9 +182,9 @@ export const story = {
       He likes to volunteer his time doing speaking engagements to tell his story and motive the youth in
       Santa Ana as a source of relatability and inspiration. He uses his name and resources to organize events
       to donate food and other necessities to those in need within his community.`
-    ]
-  },
-  spanish: []
+    ],
+    spanish: []
+  }
 }
 
 export const youth_investment = {
