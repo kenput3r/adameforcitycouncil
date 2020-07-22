@@ -179,7 +179,7 @@ const Page = () => {
           </div>
           <Form name="GetInvolved" method="POST" data-netlify="true">
             <input type="hidden" name="form-name" value="contact" />
-            <Fieldset name="GetInvolved" method="POST" data-netlify="true">
+            <Fieldset>
               <LabelWrapper>
                 <label htmlFor="firstname">First Name</label>
               </LabelWrapper>
