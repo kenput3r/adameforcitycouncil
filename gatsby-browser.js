@@ -4,4 +4,19 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-// You can delete this file if you're not using it
+exports.shouldUpdateScroll = ({
+  routerProps: { location },
+  getSavedScrollPosition
+}) => {
+  const currentPosition = getSavedScrollPosition(location)
+  window.scrollTo(...(currentPosition || [0, 0]))
+  return false
+}
+
+// IntersectionObserver polyfill for gatsby-background-image (Safari, IE)
+exports.onClientEntry = () => {
+  if (!(`IntersectionObserver` in window)) {
+    require(`intersection-observer`)
+    console.log(`# IntersectionObserver is polyfilled!`)
+  }
+}

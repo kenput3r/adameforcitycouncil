@@ -157,7 +157,7 @@ const Issues = () => {
       <Row>
         <ImageContainer className="left">
           <div className="shape">
-            <Img fluid={images.one.childImageSharp.fluid} />
+            <Img fluid={images.one.childImageSharp.fluid} alt="Tony Adame standing by the Suavecito Headquarters sign" />
           </div>
         </ImageContainer>
         <BulletContainer className="right">
@@ -167,32 +167,32 @@ const Issues = () => {
           </p>
           <p>
             {issues.bullets[language][1]}
-            <ReadMore href="/tonys-vision">READ MORE</ReadMore>
+            <ReadMore href="/issues/public-safety">READ MORE</ReadMore>
           </p>
           <p>
             {issues.bullets[language][2]}
-            <ReadMore href="/tonys-vision">READ MORE</ReadMore>
+            <ReadMore href="/issues/homelessness">READ MORE</ReadMore>
           </p>
         </BulletContainer>
       </Row>
       <Row>
         <BulletContainer className="left">
           <p>
-            <ReadMore href="/tonys-vision#Housing">READ MORE</ReadMore>
+            <ReadMore href="/issues/housing">READ MORE</ReadMore>
             {issues.bullets[language][3]}
           </p>
           <p>
-            <ReadMore href="/">READ MORE</ReadMore>
+            <ReadMore href="/issues/immigration">READ MORE</ReadMore>
             {issues.bullets[language][4]}
           </p>
           <p>
-            <ReadMore href="/">READ MORE</ReadMore>
+            <ReadMore href="/issues/small-business">READ MORE</ReadMore>
             {issues.bullets[language][5]}
           </p>
         </BulletContainer>
         <ImageContainer className="right">
           <div className="shape">
-            <Img fluid={images.two.childImageSharp.fluid} />
+            <Img fluid={images.two.childImageSharp.fluid} alt="Tony Adame standing by a mural reading 'Santa Ana'" />
           </div>
         </ImageContainer>
       </Row>

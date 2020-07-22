@@ -49,7 +49,7 @@ const Illustration = () => {
         <p>"{illustration.text[language]}"</p>
       </Text>
       <ImageContainer>
-        <Img fluid={illustration_image.logo.childImageSharp.fluid} />
+        <Img fluid={illustration_image.logo.childImageSharp.fluid} alt="A torn and tattered photograph of Tony Adame as a child" />
       </ImageContainer>
     </Section>
   )
