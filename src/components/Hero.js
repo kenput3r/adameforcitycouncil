@@ -16,8 +16,21 @@ const Section = styled(BackgroundImage)`
   max-height: 100vh;
   max-width: 100vw;
   padding: 15px;
+  span {
+    background-color: rgba(241, 202, 18, 0.8);
+    padding: 5px 5px;
+    ::selection {
+      background-color: #243c84;
+      color: #fff;
+    }
+    ::-moz-selection {
+      background-color: #243c84;
+      color: #fff;
+    }
+  }
 `
 const H2 = styled.h2`
+  font-size: 2rem;
   @media (min-width: 992px) {
     margin-left: 60px;
   }
@@ -25,10 +38,14 @@ const H2 = styled.h2`
 const Tagline = styled.div`
   font-family: "LEMONMILK", impact, Sans-Serif;
   font-weight: 700;
-  width: 425px;
+  font-size: 1.25rem;
+  width: 525px;
   max-width: 100%;
   @media (min-width: 992px) {
     margin-left: 60px;
+  }
+  span {
+    line-height: 1.75;
   }
 `
 
@@ -46,9 +63,12 @@ const Hero = () => {
   `)
   return (
     <Section tag="section" fluid={hero_image.logo.childImageSharp.fluid}>
-      <H2>{hero_text.title[language]}</H2>
+      <H2><span>{hero_text.title[language]}</span></H2>
       <Tagline>
-        <p>{hero_text.tag_line[language]}</p>
+        <p>
+          <span>{hero_text.tag_line[language][0]}</span><br />
+          <span>{hero_text.tag_line[language][1]}</span>
+        </p>
       </Tagline>
     </Section>
   )

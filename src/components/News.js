@@ -79,7 +79,7 @@ const News = () => {
           }
         }
       }
-      five: file(relativePath: { eq: "regular-dude.jpg" }) {
+      five: file(relativePath: { eq: "regular-dude-adame.jpg" }) {
         childImageSharp {
           fluid(maxHeight: 540, quality: 100) {
             ...GatsbyImageSharpFluid

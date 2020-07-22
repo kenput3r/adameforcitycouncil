@@ -46,7 +46,7 @@ const Illustration = () => {
   return (
     <Section>
       <Text>
-        <p>{illustration.text[language]}</p>
+        <p>"{illustration.text[language]}"</p>
       </Text>
       <ImageContainer>
         <Img fluid={illustration_image.logo.childImageSharp.fluid} />

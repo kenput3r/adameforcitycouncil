@@ -98,6 +98,39 @@ const BulletContainer = styled.div`
   p {
     line-height: 1.2;
   }
+  a {
+    margin-right: 5px;
+  }
+`
+const ReadMore = styled.a`
+  display: inline-block;
+  font-family: "LEMONMILK", impact, Sans-Serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 0.6rem;
+  margin-left: 5px;
+  padding: 12px;
+  position: relative;
+  text-decoration: none;
+  vertical-align: top;
+  :after {
+    z-index: -1;
+		content: "";
+		position: absolute;
+		top: 0;
+    left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: transparent;
+    border: 3px solid #f1ca12;
+		-webkit-transform: skewX(-10deg);
+		-moz-transform: skewX(-10deg);
+		-ms-transform: skewX(-10deg);
+		transform: skewX(-10deg);
+  }
+  :hover:after {
+    background-color: #f1ca12;
+  }
 `
 const Issues = () => {
   const images = useStaticQuery(graphql`
@@ -128,16 +161,34 @@ const Issues = () => {
           </div>
         </ImageContainer>
         <BulletContainer className="right">
-          <p>{issues.bullets[language][0]}</p>
-          <p>{issues.bullets[language][1]}</p>
-          <p>{issues.bullets[language][2]}</p>
+          <p>
+            {issues.bullets[language][0]}
+            <ReadMore href="/">READ MORE</ReadMore>
+          </p>
+          <p>
+            {issues.bullets[language][1]}
+            <ReadMore href="/">READ MORE</ReadMore>
+          </p>
+          <p>
+            {issues.bullets[language][2]}
+            <ReadMore href="/">READ MORE</ReadMore>
+          </p>
         </BulletContainer>
       </Row>
       <Row>
         <BulletContainer className="left">
-          <p>{issues.bullets[language][3]}</p>
-          <p>{issues.bullets[language][4]}</p>
-          <p>{issues.bullets[language][5]}</p>
+          <p>
+            <ReadMore href="/">READ MORE</ReadMore>
+            {issues.bullets[language][3]}
+          </p>
+          <p>
+            <ReadMore href="/">READ MORE</ReadMore>
+            {issues.bullets[language][4]}
+          </p>
+          <p>
+            <ReadMore href="/">READ MORE</ReadMore>
+            {issues.bullets[language][5]}
+          </p>
         </BulletContainer>
         <ImageContainer className="right">
           <div className="shape">
