@@ -9,7 +9,7 @@ import News from "../components/News"
 
 const IndexPage = () => (
   <Layout page={'home'}>
-    <SEO title="Home" />
+    <SEO title="Tony Adame" />
     <Hero />
     <Quote />
     <Illustration />
