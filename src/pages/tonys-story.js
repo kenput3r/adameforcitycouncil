@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
@@ -8,17 +8,25 @@ import { language, story } from "../components/language"
 
 const Container = styled.div`
   border-top: 4px solid #243c84;
-  margin-top: 208px;
+  margin-top: ${props => props.headerHeight}px;
   margin-left: auto;
   margin-right: auto;
   max-width: 900px;
-  padding-top: 30px;
+  padding: 30px 5px;
+  @media (max-width: 767px) {
+    border-top: 0;
+  }
 `
 const H1 = styled.h1`
   color: #243c84;
 `
 
 const Page = () => {
+  const [headerHeight, setHeaderHeight] = useState(208)
+  useEffect(() => {
+    const header = document.querySelector('header')
+    setHeaderHeight(header.offsetHeight)
+  })
   const data = useStaticQuery(graphql`
     query {
       image_1: file(relativePath: { eq: "5X0A5197.jpg" }) {
@@ -68,7 +76,7 @@ const Page = () => {
   return (
     <Layout>
       <SEO title="Tony's Story" />
-      <Container>
+      <Container headerHeight={headerHeight}>
         <H1>{story.title[language]}</H1>
         <p>{story.paragraphs[language][0]}</p>
         <p><Img fluid={data.image_1.childImageSharp.fluid} alt="Tony Adame at a park in Santa Ana" /></p>

@@ -8,6 +8,10 @@ export const site = {
 }
 
 export const navigation_text = {
+  home: {
+    english: `Home`,
+    spanish: ``
+  },
   tonys_story: {
     english: `Tony's Story`,
     spanish: ``

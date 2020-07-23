@@ -16,6 +16,11 @@ const Section = styled(BackgroundImage)`
   max-height: 100vh;
   max-width: 100vw;
   padding: 15px;
+  
+  @media (max-width: 1024px) {
+    justify-content: flex-end;
+  }
+
   span {
     background-color: rgba(241, 202, 18, 0.8);
     padding: 5px 5px;
@@ -46,6 +51,9 @@ const Tagline = styled.div`
   }
   span {
     line-height: 1.75;
+    @media (max-width: 767px) {
+      line-height: 1.85;
+    }
   }
 `
 

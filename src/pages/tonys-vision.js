@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
@@ -7,19 +7,30 @@ import SEO from "../components/seo"
 import { language, youth_investment, public_safety, homelessness, housing, immigration, small_business } from "../components/language"
 
 const Container = styled.div`
-  margin-top: 208px;
+  margin-top: ${props => props.headerHeight}px;
   margin-left: auto;
   margin-right: auto;
   max-width: 900px;
+  padding: 0 5px 30px 5px;
 `
 const H2 = styled.h2`
   border-top: 4px solid #243c84;
   color: #243c84;
   font-size: 2.25rem;
   padding-top: 30px;
+  @media (max-width: 767px) {
+    &.first {
+      border-top: 0;
+    }
+  }
 `
 
 const Page = () => {
+  const [headerHeight, setHeaderHeight] = useState(208)
+  useEffect(() => {
+    const header = document.querySelector('header')
+    setHeaderHeight(header.offsetHeight)
+  })
   const data = useStaticQuery(graphql`
     query {
       youth_image_1: file(relativePath: { eq: "Tony_Campaign-2.jpg" }) {
@@ -76,9 +87,9 @@ const Page = () => {
   return (
     <Layout page={'tonys vision'}>
       <SEO title="Tony's Vision" />
-      <Container>
+      <Container headerHeight={headerHeight}>
         <div id="YouthInvestment">
-          <H2>{youth_investment.title[language]}</H2>
+          <H2 className="first">{youth_investment.title[language]}</H2>
           <p><Img fluid={data.youth_image_1.childImageSharp.fluid} alt="Tony Adame at a park in Santa Ana" /></p>
           <p>{youth_investment.paragraphs[language][0]}</p>
           <p><Img fluid={data.youth_image_2.childImageSharp.fluid} alt="Cut out photographs of Tony Adame as a child" /></p>

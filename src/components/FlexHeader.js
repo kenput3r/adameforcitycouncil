@@ -55,6 +55,11 @@ const DesktopLink = styled.div`
     margin-right: 10px;
     text-decoration: none;
     text-transform: uppercase;
+
+    @media (max-width: 800px) {
+      padding: 10px;
+    }
+
     :hover:after {
       transform: scaleX(1);
     }
@@ -113,9 +118,13 @@ const Header = ({ page }) => {
   const handleScroll = (e) => {
     if(window.scrollY > lastScrollY) {
       setLastScrollY(window.scrollY)
-      if(window.scrollY <= 250) {
-        setLogoWidth(400 - window.scrollY)
+
+      if(window.innerWidth > 1024) {
+        if(window.scrollY <= 250) {
+          setLogoWidth(400 - window.scrollY)
+        }
       }
+
       if(headerBackground < 1) {
         setHeaderBackground(window.scrollY * 0.005)
       }

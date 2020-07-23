@@ -15,20 +15,38 @@ const H3 = styled.h3`
 const Row = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin-bottom: 30px;
-  width: 100%;
+  width: 1680px;
+  max-width: 100%;
+  position: relative;
+  margin: 0 auto;
+  @media (min-width: 768px) {
+    padding: 15px;
+  }
 `
 const A = styled.a`
+  box-sizing: border-box;
   display: block;
   padding: 0 15px;
   text-decoration: none;
+  position: relative;
+  max-width: 100%;
+  margin-bottom: 30px;
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 50%;
+  }
 `
 const Article = styled(BackgroundImage)`
   border: 2px solid #243c84;
   width: 400px;
   height: 500px;
+  max-width: 100%;
+  margin: 0 auto;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `
 const Col = styled.div`
   background-color: rgba(255, 255, 255, 0.5);
@@ -120,8 +138,6 @@ const News = () => {
             </Col>
           </Article>
         </A>
-      </Row>
-      <Row>
         <A href="https://www.ocweekly.com/the-incredible-story-of-suavecito-pomades-se-ores-j-bird-and-pete-and-tony-adame-6483081/" target="_blank">
           <Article fluid={images.four.childImageSharp.fluid}>
             <Col>

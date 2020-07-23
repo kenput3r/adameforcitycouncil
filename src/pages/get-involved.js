@@ -163,7 +163,7 @@ const postContact = async (event, email, fName, lName, phone, sendNewsletter) =>
         console.log(error)
       }
     }
-    //contact_form.submit()
+    contact_form.submit()
   }
 }
 
@@ -250,7 +250,7 @@ const Page = () => {
               </div>
               <div className="fieldset zip">
                 <LabelWrapper>
-                  <label htmlFor="zip">Zip Code</label>
+                  <label htmlFor="zip">Zip</label>
                 </LabelWrapper>
                 <div>
                   <TextInput size="8" id="zip" name="zip" type="text" onChange={(e) => setZip(e.target.value)}/>

@@ -43,11 +43,12 @@ const StyledMenu = styled.nav`
 const MobileDrawer = ({drawerOpen}) => {
   return (
     <StyledMenu drawerOpen={drawerOpen}>
-      <Link to="/">{navigation_text.tonys_story[language]}</Link>
-      <Link to="/">{navigation_text.about_ward_1[language]}</Link>
-      <Link to="/">{navigation_text.tonys_vision[language]}</Link>
-      <Link to="/">{navigation_text.issues[language]}</Link>
-      <Link to="/">{navigation_text.get_involved[language]}</Link>
+      <Link to="/">{navigation_text.home[language]}</Link>
+      <Link to="/tonys-story">{navigation_text.tonys_story[language]}</Link>
+      <Link to="/about-ward-1">{navigation_text.about_ward_1[language]}</Link>
+      <Link to="/tonys-vision">{navigation_text.tonys_vision[language]}</Link>
+      {/* <Link to="/">{navigation_text.issues[language]}</Link> */}
+      <Link to="/get-involved">{navigation_text.get_involved[language]}</Link>
     </StyledMenu>
   )
 }

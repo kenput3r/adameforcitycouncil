@@ -14,6 +14,9 @@ const Section = styled.section`
   justify-content: center;
   width: 100%;
   padding: 60px;
+  @media (max-width: 767px) {
+    padding: 30px;
+  }
 `
 const Container = styled.div`
   width: 720px;

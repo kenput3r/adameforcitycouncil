@@ -8,10 +8,14 @@ const Section = styled.section`
   background-color: #243c84;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap-reverse;
   align-items: center;
   justify-content: center;
   padding: 30px;
   width: 100%;
+  @media (max-width: 767px) {
+    padding: 0;
+  }
 `
 const Text = styled.div`
   color: #f1ca12;
@@ -21,6 +25,12 @@ const Text = styled.div`
   width: 680px;
   max-width: 100%;
   padding: 30px;
+  @media (max-width: 767px) {
+    padding: 15px;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 50%;
+  }
   p {
     line-height: 1.2;
   }
@@ -29,6 +39,12 @@ const ImageContainer = styled.div`
   width: 400px;
   max-width: 100%;
   padding: 30px;
+  @media (max-width: 767px) {
+    padding: 15px;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 50%;
+  }
 `
 
 const Illustration = () => {
