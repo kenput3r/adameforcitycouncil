@@ -38,6 +38,9 @@ const Inner = styled.div`
 `
 const H1 = styled.h1`
   color: #243c84;
+  @media (min-width: 768px) and (max-width: 1023px) {
+    padding-top: 20px;
+  }
 `
 const Form = styled.form`
   max-width: 590px;

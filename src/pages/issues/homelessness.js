@@ -7,10 +7,11 @@ import SEO from "../../components/seo"
 import { language, homelessness } from "../../components/language"
 
 const Container = styled.div`
-margin-top: ${props => props.headerHeight}px;
+  margin-top: ${props => props.headerHeight}px;
   margin-left: auto;
   margin-right: auto;
   max-width: 900px;
+  padding: 5px;
 `
 const H1 = styled.h1`
   border-top: 4px solid #243c84;
