@@ -29,7 +29,8 @@ const LogoContainer = styled.div`
   vertical-align: middle;
 `
 const DonateContainer = styled.div`
-  background-color: #243c84;
+  //background-color: #243c84;
+  background-color: #fff;
   display: table-cell;
   width: 30%;
   height: 100%;
