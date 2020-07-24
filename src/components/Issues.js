@@ -204,7 +204,7 @@ const Issues = () => {
         <BulletContainer className="right">
           <p>
             {issues.bullets[language][0]}
-            <ReadMore href="/issues/youth-investment">READ MORE</ReadMore>
+            <ReadMore href="/issues/youth-investment" title="Read more about Tony's position on Youth Investment">READ MORE</ReadMore>
           </p>
           <p>
             {issues.bullets[language][1]}

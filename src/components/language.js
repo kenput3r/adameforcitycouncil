@@ -58,8 +58,7 @@ export const hero_text = {
 
 export const quote = {
   text: {
-    english: `Some people say my story is the story of the American Dream. I tell them it’s the story of the Santa Ana
-    Dream.`,
+    english: `Some people say my story is the story of the American Dream. I tell them it’s the story of the Santa Ana Dream.`,
     spanish: ``
   }
 }
