@@ -170,13 +170,13 @@ const Header = ({ page }) => {
           <DesktopLink><Link to="/get-involved">{navigation_text.get_involved[language]}</Link></DesktopLink>
           {/* <DesktopLink><Link to="/">{navigation_text.language_toggle[language]}</Link></DesktopLink> */}
           <DesktopLink>
-            <a href="https://www.facebook.com/tony.adame.santa.ana"><img src={facebook} alt="facebook icon" /></a>
+            <a href="https://www.facebook.com/tony.adame.santa.ana" target="_blank" rel="noopener"><img src={facebook} alt="facebook icon" /></a>
           </DesktopLink>
           <DesktopLink>
-            <a href="https://www.instagram.com/tony_adame_/"><img src={instagram} alt="instagram icon" /></a>
+            <a href="https://www.instagram.com/tony_adame_/" target="_blank" rel="noopener"><img src={instagram} alt="instagram icon" /></a>
           </DesktopLink>
           <DesktopLink>
-            <a href="https://twitter.com/Tony_Adame_"><img src={twitter} alt="twitter icon" /></a>
+            <a href="https://twitter.com/Tony_Adame_" target="_blank" rel="noopener"><img src={twitter} alt="twitter icon" /></a>
           </DesktopLink>
           {/* <Donate className="button" href="/">{navigation_text.donate[language]}</Donate> */}
         </Nav>

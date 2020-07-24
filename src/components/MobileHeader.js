@@ -107,7 +107,7 @@ const MobileHeader = ({drawerOpen, setDrawerOpen}) => {
         <DonateButton href="/">{text.donate[language]}</DonateButton>
       </DonateContainer>
       <BurgerContainer>
-        <Burger drawerOpen={drawerOpen} onClick={() => setDrawerOpen(!drawerOpen)}>
+        <Burger drawerOpen={drawerOpen} onClick={() => setDrawerOpen(!drawerOpen)} aria-label="Open Menu">
           <div></div>
           <div></div>
           <div></div>

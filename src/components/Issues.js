@@ -214,26 +214,26 @@ const Issues = () => {
           </p>
           <p>
             {issues.bullets[language][1]}
-            <ReadMore href="/issues/public-safety">READ MORE</ReadMore>
+            <ReadMore href="/issues/public-safety">READ MORE<Supplemental> about Tony's position on Public Safety"</Supplemental></ReadMore>
           </p>
           <p>
             {issues.bullets[language][2]}
-            <ReadMore href="/issues/homelessness">READ MORE</ReadMore>
+            <ReadMore href="/issues/homelessness">READ MORE<Supplemental> about Tony's position on Homelessness"</Supplemental></ReadMore>
           </p>
         </BulletContainer>
       </Row>
       <Row>
         <BulletContainer className="left">
           <p>
-            <ReadMore href="/issues/housing">READ MORE</ReadMore>
+            <ReadMore href="/issues/housing">READ MORE<Supplemental> about Tony's position on Housing"</Supplemental></ReadMore>
             {issues.bullets[language][3]}
           </p>
           <p>
-            <ReadMore href="/issues/immigration">READ MORE</ReadMore>
+            <ReadMore href="/issues/immigration">READ MORE<Supplemental> about Tony's position on Immigration"</Supplemental></ReadMore>
             {issues.bullets[language][4]}
           </p>
           <p>
-            <ReadMore href="/issues/small-business">READ MORE</ReadMore>
+            <ReadMore href="/issues/small-business">READ MORE<Supplemental> about Tony's position on Small Businesses"</Supplemental></ReadMore>
             {issues.bullets[language][5]}
           </p>
         </BulletContainer>
