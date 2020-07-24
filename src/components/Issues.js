@@ -173,6 +173,12 @@ const ReadMore = styled(Link)`
     background-color: #f1ca12;
   }
 `
+const Supplemental = styled.span`
+  opacity: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+`
 const Issues = () => {
   const images = useStaticQuery(graphql`
     query {
@@ -204,7 +210,7 @@ const Issues = () => {
         <BulletContainer className="right">
           <p>
             {issues.bullets[language][0]}
-            <ReadMore href="/issues/youth-investment" title="Read more about Tony's position on Youth Investment">READ MORE</ReadMore>
+            <ReadMore href="/issues/youth-investment">READ MORE<Supplemental> about Tony's position on Youth Investment"</Supplemental></ReadMore>
           </p>
           <p>
             {issues.bullets[language][1]}
