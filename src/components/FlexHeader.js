@@ -57,7 +57,7 @@ const DesktopLink = styled.div`
     text-transform: uppercase;
 
     @media (max-width: 800px) {
-      padding: 10px;
+      padding: 10px 5px;
     }
 
     :hover:after {
@@ -178,7 +178,7 @@ const Header = ({ page }) => {
           <DesktopLink>
             <a href="https://twitter.com/Tony_Adame_" target="_blank" rel="noopener"><img src={twitter} alt="twitter icon" /></a>
           </DesktopLink>
-          {/* <Donate className="button" href="/">{navigation_text.donate[language]}</Donate> */}
+          <Donate className="button" href="https://www.efundraisingconnections.com/c/TonyAdame/">{navigation_text.donate[language]}</Donate>
         </Nav>
       </DesktopHeader>
       <MobileHeader drawerOpen={drawerOpen} setDrawerOpen={setDrawerOpen} />

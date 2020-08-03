@@ -29,8 +29,7 @@ const LogoContainer = styled.div`
   vertical-align: middle;
 `
 const DonateContainer = styled.div`
-  //background-color: #243c84;
-  background-color: #fff;
+  background-color: #243c84;
   display: table-cell;
   width: 30%;
   height: 100%;
@@ -104,7 +103,7 @@ const MobileHeader = ({drawerOpen, setDrawerOpen}) => {
         <MobileLogo />
       </LogoContainer>
       <DonateContainer>
-        <DonateButton href="/">{text.donate[language]}</DonateButton>
+        <DonateButton href="https://www.efundraisingconnections.com/c/TonyAdame/">{text.donate[language]}</DonateButton>
       </DonateContainer>
       <BurgerContainer>
         <Burger drawerOpen={drawerOpen} onClick={() => setDrawerOpen(!drawerOpen)} aria-label="Open Menu">
