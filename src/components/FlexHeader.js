@@ -64,7 +64,7 @@ const DesktopLink = styled.div`
       transform: scaleX(1);
     }
     :after {
-      content: '';
+      content: "";
       position: absolute;
       left: 15px;
       bottom: 0;
@@ -91,18 +91,18 @@ const Donate = styled.a`
   vertical-align: top;
   :after {
     z-index: -1;
-		content: "";
-		position: absolute;
-		top: 0;
+    content: "";
+    position: absolute;
+    top: 0;
     left: 0;
-		height: 100%;
-		width: 100%;
-		background-color: transparent;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
     border: 3px solid #f1ca12;
-		-webkit-transform: skewX(-10deg);
-		-moz-transform: skewX(-10deg);
-		-ms-transform: skewX(-10deg);
-		transform: skewX(-10deg);
+    -webkit-transform: skewX(-10deg);
+    -moz-transform: skewX(-10deg);
+    -ms-transform: skewX(-10deg);
+    transform: skewX(-10deg);
   }
   :hover:after {
     background-color: #f1ca12;
@@ -115,29 +115,29 @@ const Header = ({ page }) => {
   const [headerBackground, setHeaderBackground] = useState(0)
   const [drawerOpen, setDrawerOpen] = useState(false)
 
-  const handleScroll = (e) => {
-    if(window.scrollY > lastScrollY) {
+  const handleScroll = e => {
+    if (window.scrollY > lastScrollY) {
       setLastScrollY(window.scrollY)
 
-      if(window.innerWidth > 1024) {
-        if(window.scrollY <= 250) {
+      if (window.innerWidth > 1024) {
+        if (window.scrollY <= 250) {
           setLogoWidth(400 - window.scrollY)
         }
       }
 
-      if(headerBackground < 1) {
+      if (headerBackground < 1) {
         setHeaderBackground(window.scrollY * 0.005)
       }
     }
-    if(window.scrollY === 0) {
+    if (window.scrollY === 0) {
       setHeaderBackground(0)
     }
   }
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener("scroll", handleScroll)
     return function cleanup() {
-      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener("scroll", handleScroll)
     }
   }, [])
 
@@ -148,37 +148,85 @@ const Header = ({ page }) => {
         position: `fixed`,
         top: 0,
         width: `100%`,
-        zIndex: 100
+        zIndex: 100,
       }}
     >
       <DesktopHeader role="navigation">
         <LogoContainer>
-          {page === 'home' || page === 'tonys vision' ? 
-          <h1 style={{ margin: 0, maxWidth: logoWidth }}>
-            <a href="/" title={site.title[language]}><img src={logo} alt={`Text reading: Tony "Suavecito" Adame for Santa Ana City Council`} /></a>
-          </h1>
-          : 
-          <div style={{ margin: 0, maxWidth: logoWidth }}>
-            <a href="/" title={site.title[language]}><img src={logo} alt={`Text reading: Tony "Suavecito" Adame for Santa Ana City Council`} /></a>
-          </div>}
+          {page === "home" || page === "tonys vision" ? (
+            <h1 style={{ margin: 0, maxWidth: logoWidth }}>
+              <Link to="/" title={site.title[language]}>
+                <img
+                  src={logo}
+                  alt={`Text reading: Tony "Suavecito" Adame for Santa Ana City Council`}
+                />
+              </Link>
+            </h1>
+          ) : (
+            <div style={{ margin: 0, maxWidth: logoWidth }}>
+              <a href="/" title={site.title[language]}>
+                <img
+                  src={logo}
+                  alt={`Text reading: Tony "Suavecito" Adame for Santa Ana City Council`}
+                />
+              </a>
+            </div>
+          )}
         </LogoContainer>
         <Nav>
-          <DesktopLink><Link to="/tonys-story">{navigation_text.tonys_story[language]}</Link></DesktopLink>
-          <DesktopLink><Link to="/about-ward-1">{navigation_text.about_ward_1[language]}</Link></DesktopLink>
-          <DesktopLink><Link to="/tonys-vision">{navigation_text.tonys_vision[language]}</Link></DesktopLink>
-          {/* <DesktopLink><Link to="/">{navigation_text.issues[language]}</Link></DesktopLink> */}
-          <DesktopLink><Link to="/get-involved">{navigation_text.get_involved[language]}</Link></DesktopLink>
-          {/* <DesktopLink><Link to="/">{navigation_text.language_toggle[language]}</Link></DesktopLink> */}
           <DesktopLink>
-            <a href="https://www.facebook.com/tony.adame.santa.ana" target="_blank" rel="noopener"><img src={facebook} alt="facebook icon" /></a>
+            <Link to="/tonys-story">
+              {navigation_text.tonys_story[language]}
+            </Link>
           </DesktopLink>
           <DesktopLink>
-            <a href="https://www.instagram.com/tony_adame_/" target="_blank" rel="noopener"><img src={instagram} alt="instagram icon" /></a>
+            <Link to="/about-ward-1">
+              {navigation_text.about_ward_1[language]}
+            </Link>
           </DesktopLink>
           <DesktopLink>
-            <a href="https://twitter.com/Tony_Adame_" target="_blank" rel="noopener"><img src={twitter} alt="twitter icon" /></a>
+            <Link to="/tonys-vision">
+              {navigation_text.tonys_vision[language]}
+            </Link>
           </DesktopLink>
-          <Donate className="button" href="https://www.efundraisingconnections.com/c/TonyAdame/">{navigation_text.donate[language]}</Donate>
+          <DesktopLink>
+            <Link to="/get-involved">
+              {navigation_text.get_involved[language]}
+            </Link>
+          </DesktopLink>
+          <DesktopLink>
+            <a
+              href="https://www.facebook.com/tony.adame.santa.ana"
+              target="_blank"
+              rel="noopener"
+            >
+              <img src={facebook} alt="facebook icon" />
+            </a>
+          </DesktopLink>
+          <DesktopLink>
+            <a
+              href="https://www.instagram.com/tony_adame_/"
+              target="_blank"
+              rel="noopener"
+            >
+              <img src={instagram} alt="instagram icon" />
+            </a>
+          </DesktopLink>
+          <DesktopLink>
+            <a
+              href="https://twitter.com/Tony_Adame_"
+              target="_blank"
+              rel="noopener"
+            >
+              <img src={twitter} alt="twitter icon" />
+            </a>
+          </DesktopLink>
+          <Donate
+            className="button"
+            href="https://www.efundraisingconnections.com/c/TonyAdame/"
+          >
+            {navigation_text.donate[language]}
+          </Donate>
         </Nav>
       </DesktopHeader>
       <MobileHeader drawerOpen={drawerOpen} setDrawerOpen={setDrawerOpen} />

@@ -13,6 +13,7 @@ import Header from "./FlexHeader"
 import "./layout.css"
 import "./fonts.css"
 import Footer from "./Footer"
+import LanguageToggle from "./LanguageToggle"
 
 const Layout = ({ children, page }) => {
   const data = useStaticQuery(graphql`
@@ -24,12 +25,13 @@ const Layout = ({ children, page }) => {
       }
     }
   `)
-  
+
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} page={page} />
       <main>{children}</main>
       <Footer />
+      <LanguageToggle />
     </>
   )
 }

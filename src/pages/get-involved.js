@@ -52,6 +52,10 @@ const Fieldset = styled.div`
 `
 const LabelWrapper = styled.div`
   margin: 0 0 6px;
+  .zip {
+    font-size: ${props => props.language === "spanish" && "12px"};
+    line-height: 1.45em;
+  }
 `
 const TextInput = styled.input`
   height: 60px;
@@ -59,9 +63,9 @@ const TextInput = styled.input`
   width: 100%;
   border: 1px solid #243c84;
   background: #fff;
-  font: 400 15px/22px brother-1816,sans-serif;
-  color: #12204A;
-  color: rgba(18,32,74,.7);
+  font: 400 15px/22px brother-1816, sans-serif;
+  color: #12204a;
+  color: rgba(18, 32, 74, 0.7);
   padding: 18px 20px;
   appearance: none;
   border-radius: 0;
@@ -139,30 +143,37 @@ const CheckboxLabel = styled.label`
     color: #233F94;
   }
 `
-const postContact = async (event, email, fName, lName, phone, sendNewsletter) => {
+const postContact = async (
+  event,
+  email,
+  fName,
+  lName,
+  phone,
+  sendNewsletter
+) => {
   event.preventDefault()
-  const contact_form = document.getElementById('GetInvolved')
+  const contact_form = document.getElementById("GetInvolved")
   let form_errors = false
-  for(let i = 0; i < contact_form.elements.length; i++) {
+  for (let i = 0; i < contact_form.elements.length; i++) {
     const element = contact_form.elements[i]
-    if(element.required && !element.value) {
+    if (element.required && !element.value) {
       form_errors = true
     }
   }
-  if(!form_errors) {
-    if(sendNewsletter) {
-      const body = {email: email, fName: fName, lName: lName, phone: phone}
+  if (!form_errors) {
+    if (sendNewsletter) {
+      const body = { email: email, fName: fName, lName: lName, phone: phone }
       try {
-        const response = await fetch('/.netlify/functions/create-contact', {
-          method: 'POST',
-          body: JSON.stringify(body)
+        const response = await fetch("/.netlify/functions/create-contact", {
+          method: "POST",
+          body: JSON.stringify(body),
         })
-        if(!response.error) {
-          console.log('no errors')
-        }else{
+        if (!response.error) {
+          console.log("no errors")
+        } else {
           console.log(response.error)
         }
-      }catch(error) {
+      } catch (error) {
         console.log(error)
       }
     }
@@ -172,23 +183,23 @@ const postContact = async (event, email, fName, lName, phone, sendNewsletter) =>
 
 const Page = () => {
   const [checkboxChecked, setCheckboxChecked] = useState(0)
-  const [checkboxContent, setAfterContent] = useState('')
-  const [email, setEmail] = useState('')
-  const [fName, setFname] = useState('')
-  const [lName, setLname] = useState('')
-  const [phone, setPhone] = useState('')
-  const [zip, setZip] = useState('')
+  const [checkboxContent, setAfterContent] = useState("")
+  const [email, setEmail] = useState("")
+  const [fName, setFname] = useState("")
+  const [lName, setLname] = useState("")
+  const [phone, setPhone] = useState("")
+  const [zip, setZip] = useState("")
   const handleClick = () => {
-    if(!checkboxChecked) {
+    if (!checkboxChecked) {
       setCheckboxChecked(1)
-      setAfterContent('x')
-    }else{
+      setAfterContent("x")
+    } else {
       setCheckboxChecked(0)
-      setAfterContent('')
+      setAfterContent("")
     }
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = event => {
     postContact(event, email, fName, lName, phone, checkboxChecked)
   }
 
@@ -207,7 +218,10 @@ const Page = () => {
     <Layout>
       <SEO title="Get Involved" />
       <Container>
-        <StyledBackground fluid={data.image_1.childImageSharp.fluid} style={{position: "absolute", backgroundPosition: "left top"}}></StyledBackground>
+        <StyledBackground
+          fluid={data.image_1.childImageSharp.fluid}
+          style={{ position: "absolute", backgroundPosition: "left top" }}
+        ></StyledBackground>
         <Inner>
           <H1>
             <div>{get_involved.title[language][0]}</div>
@@ -216,62 +230,120 @@ const Page = () => {
           <div>
             <p>{get_involved.body[language]}</p>
           </div>
-          <Form id="GetInvolved" name="GetInvolved" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={event => handleSubmit(event)}>
+          <Form
+            id="GetInvolved"
+            name="GetInvolved"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onSubmit={event => handleSubmit(event)}
+          >
             <input type="hidden" name="form-name" value="GetInvolved" />
             <Fieldset>
               <LabelWrapper>
-                <label htmlFor="firstname">First Name</label>
+                <label htmlFor="firstname">
+                  {get_involved.first_name[language]}
+                </label>
               </LabelWrapper>
               <div>
-                <TextInput size="16" id="firstname" name="firstname" type="text" onChange={(e) => setFname(e.target.value)}/>
+                <TextInput
+                  size="16"
+                  id="firstname"
+                  name="firstname"
+                  type="text"
+                  onChange={e => setFname(e.target.value)}
+                />
               </div>
             </Fieldset>
             <Fieldset>
               <LabelWrapper>
-                <label htmlFor="lastname">Last Name</label>
+                <label htmlFor="lastname">
+                  {get_involved.last_name[language]}
+                </label>
               </LabelWrapper>
               <div>
-                <TextInput size="25" id="lastname" name="lastname" type="text" onChange={(e) => setLname(e.target.value)}/>
+                <TextInput
+                  size="25"
+                  id="lastname"
+                  name="lastname"
+                  type="text"
+                  onChange={e => setLname(e.target.value)}
+                />
               </div>
             </Fieldset>
             <Fieldset>
               <LabelWrapper>
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email">{get_involved.email[language]}</label>
               </LabelWrapper>
               <div>
-                <TextInput size="48" id="email" name="email" type="email" required="required" onChange={(e) => setEmail(e.target.value)}/>
+                <TextInput
+                  size="48"
+                  id="email"
+                  name="email"
+                  type="email"
+                  required="required"
+                  onChange={e => setEmail(e.target.value)}
+                />
               </div>
             </Fieldset>
             <InlineSet>
               <div className="fieldset">
                 <LabelWrapper>
-                  <label htmlFor="mobile">Mobile Phone</label>
+                  <label htmlFor="mobile">{get_involved.phone[language]}</label>
                 </LabelWrapper>
                 <div>
-                  <TextInput size="15" id="mobile" name="mobile" type="tel" onChange={(e) => setPhone(e.target.value)}/>
+                  <TextInput
+                    size="15"
+                    id="mobile"
+                    name="mobile"
+                    type="tel"
+                    onChange={e => setPhone(e.target.value)}
+                  />
                 </div>
               </div>
               <div className="fieldset zip">
-                <LabelWrapper>
-                  <label htmlFor="zip">Zip</label>
+                <LabelWrapper language={language}>
+                  <label htmlFor="zip" className="zip">
+                    {get_involved.zip[language]}
+                  </label>
                 </LabelWrapper>
                 <div>
-                  <TextInput size="8" id="zip" name="zip" type="text" onChange={(e) => setZip(e.target.value)}/>
+                  <TextInput
+                    size="8"
+                    id="zip"
+                    name="zip"
+                    type="text"
+                    onChange={e => setZip(e.target.value)}
+                  />
                 </div>
               </div>
             </InlineSet>
             <Fieldset>
               <div>
-                <Checkbox name="newsletter" type="checkbox" value={checkboxChecked}></Checkbox>
-                <CheckboxLabel htmlFor="newsletter" onClick={handleClick} afterContent={checkboxContent}>Sign up for updates</CheckboxLabel>
+                <Checkbox
+                  name="newsletter"
+                  type="checkbox"
+                  value={checkboxChecked}
+                ></Checkbox>
+                <CheckboxLabel
+                  htmlFor="newsletter"
+                  onClick={handleClick}
+                  afterContent={checkboxContent}
+                >
+                  {get_involved.register[language]}
+                </CheckboxLabel>
               </div>
             </Fieldset>
-            <TextInput type="submit" value="Let's Go" className="button" />
+            <TextInput
+              type="submit"
+              value={get_involved.lets_go[language]}
+              className="button"
+            />
           </Form>
         </Inner>
       </Container>
     </Layout>
   )
-} 
+}
 
 export default Page

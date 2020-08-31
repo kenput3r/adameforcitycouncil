@@ -4,9 +4,7 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 import { language, issues } from "./language"
 
-const Section = styled.section`
-
-`
+const Section = styled.section``
 const H2 = styled.h2`
   color: #243c84;
   font-size: 2.25rem;
@@ -55,7 +53,6 @@ const ImageContainer = styled.div`
         -ms-transform: skewX(-5deg);
         transform: skewX(-5deg);
         position: relative;
-    
       }
       img {
         margin-left: 30px;
@@ -73,7 +70,6 @@ const ImageContainer = styled.div`
         -ms-transform: skewX(-5deg);
         transform: skewX(-5deg);
         position: relative;
-    
       }
       img {
         margin-left: -30px;
@@ -84,7 +80,6 @@ const ImageContainer = styled.div`
       }
     }
   }
-
 `
 const BulletContainer = styled.div`
   color: #243c84;
@@ -156,18 +151,18 @@ const ReadMore = styled(Link)`
   vertical-align: top;
   :after {
     z-index: -1;
-		content: "";
-		position: absolute;
-		top: 0;
+    content: "";
+    position: absolute;
+    top: 0;
     left: 0;
-		height: 100%;
-		width: 100%;
-		background-color: transparent;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
     border: 3px solid #f1ca12;
-		-webkit-transform: skewX(-10deg);
-		-moz-transform: skewX(-10deg);
-		-ms-transform: skewX(-10deg);
-		transform: skewX(-10deg);
+    -webkit-transform: skewX(-10deg);
+    -moz-transform: skewX(-10deg);
+    -ms-transform: skewX(-10deg);
+    transform: skewX(-10deg);
   }
   :hover:after {
     background-color: #f1ca12;
@@ -204,42 +199,81 @@ const Issues = () => {
       <Row>
         <ImageContainer className="left">
           <div className="shape">
-            <Img fluid={images.one.childImageSharp.fluid} alt="Tony Adame standing by the Suavecito Headquarters sign" />
+            <Img
+              fluid={images.one.childImageSharp.fluid}
+              alt="Tony Adame standing by the Suavecito Headquarters sign"
+            />
           </div>
         </ImageContainer>
         <BulletContainer className="right">
           <p>
             {issues.bullets[language][0]}
-            <ReadMore href="/issues/youth-investment">READ MORE<Supplemental> about Tony's position on Youth Investment"</Supplemental></ReadMore>
+            <ReadMore to="/issues/youth-investment">
+              {issues.read_more[language]}
+              <Supplemental>
+                {" "}
+                about Tony's position on Youth Investment"
+              </Supplemental>
+            </ReadMore>
           </p>
           <p>
             {issues.bullets[language][1]}
-            <ReadMore href="/issues/public-safety">READ MORE<Supplemental> about Tony's position on Public Safety"</Supplemental></ReadMore>
+            <ReadMore to="/issues/public-safety">
+              {issues.read_more[language]}
+              <Supplemental>
+                {" "}
+                about Tony's position on Public Safety"
+              </Supplemental>
+            </ReadMore>
           </p>
           <p>
             {issues.bullets[language][2]}
-            <ReadMore href="/issues/homelessness">READ MORE<Supplemental> about Tony's position on Homelessness"</Supplemental></ReadMore>
+            <ReadMore to="/issues/homelessness">
+              {issues.read_more[language]}
+              <Supplemental>
+                {" "}
+                about Tony's position on Homelessness"
+              </Supplemental>
+            </ReadMore>
           </p>
         </BulletContainer>
       </Row>
       <Row>
         <BulletContainer className="left">
           <p>
-            <ReadMore href="/issues/housing">READ MORE<Supplemental> about Tony's position on Housing"</Supplemental></ReadMore>
+            <ReadMore to="/issues/housing">
+              {issues.read_more[language]}
+              <Supplemental> about Tony's position on Housing"</Supplemental>
+            </ReadMore>
             {issues.bullets[language][3]}
           </p>
           <p>
-            <ReadMore href="/issues/immigration">READ MORE<Supplemental> about Tony's position on Immigration"</Supplemental></ReadMore>
+            <ReadMore to="/issues/immigration">
+              {issues.read_more[language]}
+              <Supplemental>
+                {" "}
+                about Tony's position on Immigration"
+              </Supplemental>
+            </ReadMore>
             {issues.bullets[language][4]}
           </p>
           <p>
-            <ReadMore href="/issues/small-business">READ MORE<Supplemental> about Tony's position on Small Businesses"</Supplemental></ReadMore>
+            <ReadMore to="/issues/small-business">
+              {issues.read_more[language]}
+              <Supplemental>
+                {" "}
+                about Tony's position on Small Businesses"
+              </Supplemental>
+            </ReadMore>
             {issues.bullets[language][5]}
           </p>
         </BulletContainer>
         <ImageContainer className="right">
           <div className="shape">
-            <Img fluid={images.two.childImageSharp.fluid} alt="Tony Adame standing by a mural reading 'Santa Ana'" />
+            <Img
+              fluid={images.two.childImageSharp.fluid}
+              alt="Tony Adame standing by a mural reading 'Santa Ana'"
+            />
           </div>
         </ImageContainer>
       </Row>
