@@ -8,7 +8,7 @@ import Issues from "../components/Issues"
 import News from "../components/News"
 
 const IndexPage = () => (
-  <Layout page={'home'}>
+  <Layout page={"home"} location="/">
     <SEO title="Tony Adame" />
     <Hero />
     <Quote />

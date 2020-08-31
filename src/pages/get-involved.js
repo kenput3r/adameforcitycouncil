@@ -215,7 +215,7 @@ const Page = () => {
     }
   `)
   return (
-    <Layout>
+    <Layout location="/get-involved">
       <SEO title="Get Involved" />
       <Container>
         <StyledBackground

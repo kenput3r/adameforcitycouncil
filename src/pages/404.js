@@ -32,7 +32,7 @@ const NotFoundPage = () => {
   const [headerHeight, setHeaderHeight] = useState(208)
   const [offset, setOffset] = useState(0)
   useEffect(() => {
-    const footer = document.querySelector('footer')
+    const footer = document.querySelector("footer")
     setOffset(footer.offsetHeight)
   })
   const data = useStaticQuery(graphql`
@@ -47,19 +47,27 @@ const NotFoundPage = () => {
     }
   `)
   return (
-    <Layout>
+    <Layout location="/">
       <SEO title="404: Not found" />
       <Container offset={offset}>
         <StyledBackground fluid={data.image.childImageSharp.fluid}>
           <Inner>
-            <h1><span>404</span></h1>
-            <h2><span>Not Found</span></h2>
-            <p><span>You just hit a route that doesn&#39;t exist... the sadness.</span></p>
+            <h1>
+              <span>404</span>
+            </h1>
+            <h2>
+              <span>Not Found</span>
+            </h2>
+            <p>
+              <span>
+                You just hit a route that doesn&#39;t exist... the sadness.
+              </span>
+            </p>
           </Inner>
         </StyledBackground>
       </Container>
     </Layout>
   )
-} 
+}
 
 export default NotFoundPage

@@ -24,7 +24,7 @@ const H1 = styled.h1`
 const Page = () => {
   const [headerHeight, setHeaderHeight] = useState(208)
   useEffect(() => {
-    const header = document.querySelector('header')
+    const header = document.querySelector("header")
     setHeaderHeight(header.offsetHeight)
   })
   const data = useStaticQuery(graphql`
@@ -74,27 +74,56 @@ const Page = () => {
     }
   `)
   return (
-    <Layout>
+    <Layout location="/tonys-story">
       <SEO title="Tony's Story" />
       <Container headerHeight={headerHeight}>
         <H1>{story.title[language]}</H1>
         <p>{story.paragraphs[language][0]}</p>
-        <p><Img fluid={data.image_1.childImageSharp.fluid} alt="Tony Adame at a park in Santa Ana" /></p>
+        <p>
+          <Img
+            fluid={data.image_1.childImageSharp.fluid}
+            alt="Tony Adame at a park in Santa Ana"
+          />
+        </p>
         <p>{story.paragraphs[language][1]}</p>
         <p>{story.paragraphs[language][2]}</p>
-        <p><Img fluid={data.image_2.childImageSharp.fluid} alt="Cut out photos from Tony's childhood" /></p>
+        <p>
+          <Img
+            fluid={data.image_2.childImageSharp.fluid}
+            alt="Cut out photos from Tony's childhood"
+          />
+        </p>
         <p>{story.paragraphs[language][3]}</p>
-        <p><Img fluid={data.image_3.childImageSharp.fluid} alt="A photograph of Tony in a class room as a child" /></p>
+        <p>
+          <Img
+            fluid={data.image_3.childImageSharp.fluid}
+            alt="A photograph of Tony in a class room as a child"
+          />
+        </p>
         <p>{story.paragraphs[language][4]}</p>
-        <p><Img fluid={data.image_4.childImageSharp.fluid} alt="Tony standing in front of the Suavecito building" /></p>
+        <p>
+          <Img
+            fluid={data.image_4.childImageSharp.fluid}
+            alt="Tony standing in front of the Suavecito building"
+          />
+        </p>
         <p>{story.paragraphs[language][5]}</p>
         <p>{story.paragraphs[language][6]}</p>
-        <p><Img fluid={data.image_5.childImageSharp.fluid} alt="Tony handing out Christmas gifts from the Suavecito Metro Van" /></p>
-        <p><Img fluid={data.image_6.childImageSharp.fluid} alt="Tony and other volunteers of the Suavecito Toy Drive" /></p>
-
+        <p>
+          <Img
+            fluid={data.image_5.childImageSharp.fluid}
+            alt="Tony handing out Christmas gifts from the Suavecito Metro Van"
+          />
+        </p>
+        <p>
+          <Img
+            fluid={data.image_6.childImageSharp.fluid}
+            alt="Tony and other volunteers of the Suavecito Toy Drive"
+          />
+        </p>
       </Container>
     </Layout>
   )
-} 
+}
 
 export default Page

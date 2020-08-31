@@ -26,7 +26,7 @@ const H1 = styled.h1`
 const Page = () => {
   const [headerHeight, setHeaderHeight] = useState(208)
   useEffect(() => {
-    const header = document.querySelector('header')
+    const header = document.querySelector("header")
     setHeaderHeight(header.offsetHeight)
   })
   const data = useStaticQuery(graphql`
@@ -41,17 +41,22 @@ const Page = () => {
     }
   `)
   return (
-    <Layout>
+    <Layout location="/issues/immigration">
       <SEO title={immigration.title[language]} />
       <Container headerHeight={headerHeight}>
         <H1>{immigration.title[language]}</H1>
-        <p><Img fluid={data.immigration_image_1.childImageSharp.fluid} alt="Tony Adame standing by a mural reading 'Community'" /></p>
+        <p>
+          <Img
+            fluid={data.immigration_image_1.childImageSharp.fluid}
+            alt="Tony Adame standing by a mural reading 'Community'"
+          />
+        </p>
         <p>{immigration.paragraphs[language][0]}</p>
         <p>{immigration.paragraphs[language][1]}</p>
         <p>{immigration.paragraphs[language][2]}</p>
       </Container>
     </Layout>
   )
-} 
+}
 
 export default Page

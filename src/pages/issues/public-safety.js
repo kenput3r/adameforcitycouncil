@@ -7,7 +7,7 @@ import SEO from "../../components/seo"
 import { language, public_safety } from "../../components/language"
 
 const Container = styled.div`
-margin-top: ${props => props.headerHeight}px;
+  margin-top: ${props => props.headerHeight}px;
   margin-left: auto;
   margin-right: auto;
   max-width: 900px;
@@ -26,7 +26,7 @@ const H1 = styled.h1`
 const Page = () => {
   const [headerHeight, setHeaderHeight] = useState(208)
   useEffect(() => {
-    const header = document.querySelector('header')
+    const header = document.querySelector("header")
     setHeaderHeight(header.offsetHeight)
   })
   const data = useStaticQuery(graphql`
@@ -41,17 +41,22 @@ const Page = () => {
     }
   `)
   return (
-    <Layout>
+    <Layout location="/issues/public-safety">
       <SEO title={public_safety.title[language]} />
       <Container headerHeight={headerHeight}>
         <H1>{public_safety.title[language]}</H1>
-        <p><Img fluid={data.public_safety_image_1.childImageSharp.fluid} alt="Tony Adame at a park in Santa Ana" /></p>
+        <p>
+          <Img
+            fluid={data.public_safety_image_1.childImageSharp.fluid}
+            alt="Tony Adame at a park in Santa Ana"
+          />
+        </p>
         <p>{public_safety.paragraphs[language][0]}</p>
         <p>{public_safety.paragraphs[language][1]}</p>
         <p>{public_safety.paragraphs[language][2]}</p>
       </Container>
     </Layout>
   )
-} 
+}
 
 export default Page

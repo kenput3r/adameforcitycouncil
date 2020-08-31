@@ -26,12 +26,14 @@ const H1 = styled.h1`
 const Page = () => {
   const [headerHeight, setHeaderHeight] = useState(208)
   useEffect(() => {
-    const header = document.querySelector('header')
+    const header = document.querySelector("header")
     setHeaderHeight(header.offsetHeight)
   })
   const data = useStaticQuery(graphql`
     query {
-      small_business_image_1: file(relativePath: { eq: "Tony_Campaign-14.jpg" }) {
+      small_business_image_1: file(
+        relativePath: { eq: "Tony_Campaign-14.jpg" }
+      ) {
         childImageSharp {
           fluid(maxWidth: 900, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -41,11 +43,16 @@ const Page = () => {
     }
   `)
   return (
-    <Layout>
+    <Layout location="/issues/small-business">
       <SEO title={small_business.title[language]} />
       <Container headerHeight={headerHeight}>
         <H1>{small_business.title[language]}</H1>
-        <p><Img fluid={data.small_business_image_1.childImageSharp.fluid} alt="Tony Adame standing in front of the Suavecito building" /></p>
+        <p>
+          <Img
+            fluid={data.small_business_image_1.childImageSharp.fluid}
+            alt="Tony Adame standing in front of the Suavecito building"
+          />
+        </p>
         <p>{small_business.paragraphs[language][0]}</p>
         <p>{small_business.paragraphs[language][1]}</p>
         <p>{small_business.paragraphs[language][2]}</p>
@@ -53,6 +60,6 @@ const Page = () => {
       </Container>
     </Layout>
   )
-} 
+}
 
 export default Page
