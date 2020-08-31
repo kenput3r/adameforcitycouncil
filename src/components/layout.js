@@ -15,7 +15,7 @@ import "./fonts.css"
 import Footer from "./Footer"
 import LanguageToggle from "./LanguageToggle"
 
-const Layout = ({ children, page }) => {
+const Layout = ({ children, page, location }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -31,7 +31,7 @@ const Layout = ({ children, page }) => {
       <Header siteTitle={data.site.siteMetadata.title} page={page} />
       <main>{children}</main>
       <Footer />
-      <LanguageToggle />
+      <LanguageToggle location={location} />
     </>
   )
 }
