@@ -39,7 +39,7 @@ const Page = () => {
     }
   `)
   return (
-    <Layout location="about-ward-1">
+    <Layout location="/about-ward-1">
       <SEO title="About Ward 1" />
       <Container headerHeight={headerHeight}>
         <H1>{ward_1.title[language]}</H1>
