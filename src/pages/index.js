@@ -16,9 +16,9 @@ const IndexPage = () => (
     <Quote />
     <Illustration />
     <Issues />
-    <SectionTitle title="// Tony's Story //" />
+    <SectionTitle title="// Historia De Tony //" />
     <Video
-      src="https://www.youtube.com/embed/ca99oVmVZeo"
+      src="https://www.youtube.com/embed/05TYOrZoFCg"
       title="Tony's Story"
     />
     <News />

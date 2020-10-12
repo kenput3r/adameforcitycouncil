@@ -7,7 +7,7 @@ const H3 = styled.h3`
   text-align: center;
   padding-top: 30px;
 
-  @media (max-width: 320px) {
+  @media (max-width: 375px) {
     font-size: 1.75rem;
   }
 `

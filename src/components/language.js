@@ -1,4 +1,4 @@
-export const language = `english`
+export const language = `spanish`
 
 export const site = {
   title: {
