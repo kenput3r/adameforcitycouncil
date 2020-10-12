@@ -5,6 +5,8 @@ import Hero from "../components/Hero"
 import Quote from "../components/Quote"
 import Illustration from "../components/Illustration"
 import Issues from "../components/Issues"
+import SectionTitle from "../components/SectionTitle"
+import Video from "../components/Video"
 import News from "../components/News"
 
 const IndexPage = () => (
@@ -14,6 +16,11 @@ const IndexPage = () => (
     <Quote />
     <Illustration />
     <Issues />
+    <SectionTitle title="// Tony's Story //" />
+    <Video
+      src="https://www.youtube.com/embed/ca99oVmVZeo"
+      title="Tony's Story"
+    />
     <News />
   </Layout>
 )
